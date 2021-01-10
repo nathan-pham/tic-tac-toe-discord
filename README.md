@@ -1,6 +1,3 @@
-# Tic Tac Toe Discord
-A cool Discord bot so you can play Tic Tac Toe anywhere with your friends! Submitted to the Snakes and Hackers hackathon.
-
 ## Inspiration
 Tic Tac Toe is about as simple as board games get, and yet it’s still so fun! We wanted to share a discord bot that can be added to any server to keep the fun and our love of Tic Tac Toe alive.
 
@@ -8,7 +5,7 @@ Tic Tac Toe is about as simple as board games get, and yet it’s still so fun! 
 The Tic Tac Toe Discord bot lets you pair up with a friend to play tic tac toe! Currently the bot features 5 commands, including new, quit, play, recap, and help. “New” creates a new game with another player, “quit” deletes the game, “recap” shows you the game board, and “help” is intentionally designed to be unhelpful. 
 
 ## How we built it
-We built our Tic Tac Toe Discord bot using *Node.js* to host the server and *Discord.js* to handle all requests coming  from Discord. We hosted the bot on *Repl.it*. The design and architectural pattern we used in this project is called “going with the flow”. 
+We built our Tic Tac Toe Discord bot using *Node.js* to host the server and *Discord.js* to handle all requests coming  from Discord. We hosted the bot on *Repl.it*. 
 
 ## Challenges we ran into
 A main challenge we ran into was organizing and checking our code. It’s a short and sweet program, but oh were there typos and edge cases we needed to cover before our Tic Tac Toe Discord bot was as robust as it could be.
