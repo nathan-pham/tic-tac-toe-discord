@@ -56,7 +56,7 @@ class Game {
 	}
 
   play(ctx, args, senderId) {
-		if (senderId !== this.ids[this.turn]){
+		if (senderId !== this.ids[this.turn]) {
 			return this.sendMessage(ctx, "It's not your turn.");
 		}
 		
@@ -101,27 +101,20 @@ client.on("message", msg => {
   
   
   if (command ==  "new") {
-		if (serverId in idToGame && authorId in idToGame[serverId]) {
-			return msg.channel.send("You're already in a game");
-		}
+		if (serverId in idToGame && authorId in idToGame[serverId]) return msg.channel.send("You're already in a game");
 
     let p2 = args[0];
 
-    if(p1 == p2) {
-      return msg.channel.send("You can't play a match with yourself")
-    }
-		
+    if(p1 == p2) return msg.channel.send("You can't play a match with yourself");
 		if (!msg.guild.member(p2.substring(3, p2.length - 1))) return msg.channel.send("Other player doesn't exist");
   
 		let newGame = new Game(msg, '<@!' + authorId + '>', p2);
 		if (!(serverId in idToGame)) idToGame[serverId] = {};
 
-
 		idToGame[serverId][p1] = newGame;
 		idToGame[serverId][p2] = newGame;
 	}
   else if (command == "quit") {
-    // switched authorId to p1 ok cool
 		if (serverId in idToGame && p1 in idToGame[serverId]) {
 			let _p1 = idToGame[serverId][p1].ids[0];
 			let _p2 = idToGame[serverId][p1].ids[1];
